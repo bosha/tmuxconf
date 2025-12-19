@@ -48,9 +48,15 @@ if [ -f "$HOME/.tmux.conf" ]; then
   log "  $BK"
 fi
 
-# install config
-log "Installing ~/.tmux.conf"
+# copy config
+log "Copying ~/.tmux.conf"
 cp "$CONF_SRC" "$HOME/.tmux.conf"
+
+if [ -d "$TMP_DIR/.tmux" ]; then
+  log "Copying ~/.tmux/ (scripts, themes, etc.)"
+  mkdir -p "$HOME/.tmux"
+  cp -a "$TMP_DIR/.tmux/." "$HOME/.tmux/"
+fi
 
 # install TPM
 TPM_DIR="$HOME/.tmux/plugins/tpm"
