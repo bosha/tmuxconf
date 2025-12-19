@@ -17,7 +17,7 @@ If `tmux` or `git` are missing, they will be installed automatically via **Homeb
 ## Installation
 
 ```sh
-curl -fsSL https://github.com/bosha/tmuxconf/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/bosha/tmuxconf/refs/heads/master/install.sh | sh
 ```
 
 ---
